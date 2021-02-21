@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function Poster(props) {
+    return <h1>Hello World</h1>;
+}
+
+function PosterWall() {
+    return (
+        <div>
+            <Poster />
+            <Poster />
+            <Poster />
+        </div>
+    );
+}
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <PosterWall />,
   document.getElementById('root')
 );
 
