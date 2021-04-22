@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar-brand {
+  position: absolute;
+  left: 45%;
+  width:100px;
+}

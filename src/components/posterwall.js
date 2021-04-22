@@ -1,5 +1,5 @@
 import React from 'react';
-import Poster from './Poster';
+import Poster from './poster';
 let properties = require('../properties/posters.json');
 
 class PosterWall extends React.Component {

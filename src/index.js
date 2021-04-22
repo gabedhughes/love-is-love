@@ -1,28 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
 import reportWebVitals from './reportWebVitals';
-import Popup from "reactjs-popup";
-import 'reactjs-popup/dist/index.css'
-import PosterWall from './components/PosterWall'
-
-function Poster(props) {
-    return <h1>Hello World</h1>;
-}
+import {Modal, Button, Nav, Navbar} from 'react-bootstrap';
+import PosterWall from './components/posterwall';
+import Popup from './components/modal';
+import Header from "./components/header";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
-            <PosterWall />
+            <>
+                <Popup />
+
+                <PosterWall />
+            </>
         );
     }
 }
 
 ReactDOM.render(
-  <PosterWall />,
+  <App />,
   document.getElementById('root')
 );
 
