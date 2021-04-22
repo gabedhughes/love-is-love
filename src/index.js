@@ -1,20 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style/index.css';
 import reportWebVitals from './reportWebVitals';
+import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css'
+import PosterWall from './components/PosterWall'
 
 function Poster(props) {
     return <h1>Hello World</h1>;
 }
 
-function PosterWall() {
-    return (
-        <div>
-            <Poster />
-            <Poster />
-            <Poster />
-        </div>
-    );
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <PosterWall />
+        );
+    }
 }
 
 ReactDOM.render(
