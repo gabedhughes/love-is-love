@@ -5,7 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import {Modal, Button, Nav, Navbar} from 'react-bootstrap';
 import PosterWall from './components/posterwall';
 import Popup from './components/modal';
-import Header from "./components/header";
+import Header from "./components/header"
+import Footer from "./components/footer"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
@@ -17,7 +18,6 @@ class App extends React.Component {
         return (
             <>
                 <Popup />
-
                 <PosterWall />
             </>
         );
