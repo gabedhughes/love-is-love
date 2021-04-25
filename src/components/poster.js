@@ -2,6 +2,7 @@ import React from 'react';
 import {Container, Image} from "react-bootstrap";
 import ReactCardFlip from "react-card-flip";
 import {MDBMask, MDBView} from "mdbreact";
+import VideoPlayer from "./videoplayer";
 
 class Poster extends React.Component {
     constructor(props) {
@@ -18,25 +19,35 @@ class Poster extends React.Component {
         this.handleHover = this.handleHover.bind(this);
     }
 
+    state = {
+        videoIsOpen: false
+    }
+
     handleHover(e) {
         e.preventDefault();
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
 
+    toggleModal = () => this.setState(state => ({videoIsOpen: !state.videoIsOpen}))
+
     render() {
         return(
-            <MDBView hover zoom>
-                <img
-                    src="https://loveislove-cdn.s3.amazonaws.com/rent.jpeg"
-                    className="img-fluid"
-                    alt=""
-                />
-                <MDBMask className="flex-center">
-                    <p className="white-text">{this.props.performer}</p>
-                    <p>{this.props.song}</p>
-                    <p>{this.props.show}</p>
-                </MDBMask>
-            </MDBView>
+            <div>
+                <div className='poster' onClick={this.toggleModal}>
+                    <img
+                        src={this.props.poster_url}
+                        className="poster-image"
+                        alt=""
+                    />
+                    <div className='poster-overlay'>
+                        <div className='poster-text'>
+                            <p>{this.props.performer}</p>
+                            <p>Performing {this.props.song} from {this.props.show}</p>
+                        </div>
+                    </div>
+                </div>
+                <VideoPlayer opened={this.state.videoIsOpen} toggleModal={this.toggleModal} video_url={this.props.video_url}/>
+            </div>
         );
     }
 }

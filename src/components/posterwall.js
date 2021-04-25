@@ -18,10 +18,10 @@ class PosterWall extends React.Component {
             });
 
         const breakpointColumnObj = {
-            default: 5,
-            1100: 4,
-            700: 3,
-            500: 2
+            default: 6,
+            1100: 5,
+            700: 4,
+            500: 3
         }
         return(
             <Masonry breakpointCols={breakpointColumnObj} className="grid" columnClassName="grid_column">

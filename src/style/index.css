@@ -28,10 +28,6 @@ code {
   width: 100%;
 }
 
-.poster {
-
-}
-
 .grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
@@ -48,4 +44,51 @@ code {
 .grid_column > div { /* change div to reference your elements you put in <Masonry> */
   background: grey;
   margin-bottom: 30px;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.react-player {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.poster {
+  position: relative;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.poster-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.poster:hover .poster-overlay {
+  opacity: 1;
+}
+
+.poster-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
