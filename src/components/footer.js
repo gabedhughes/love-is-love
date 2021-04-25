@@ -7,7 +7,7 @@ class Footer extends React.Component {
     render() {
         return(
             <div className="footer">
-                <p>Copyright &copy; 2021 Gabe Hughes. All Rights Reserved</p>
+                <p>Copyright &copy; 2021 Gabe Hughes and Vista Ridge Drama Club. All Rights Reserved</p>
             </div>
         );
     }

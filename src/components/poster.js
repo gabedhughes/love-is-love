@@ -41,8 +41,9 @@ class Poster extends React.Component {
                     />
                     <div className='poster-overlay'>
                         <div className='poster-text'>
-                            <p>{this.props.performer}</p>
+                            <p><b>{this.props.performer}</b></p>
                             <p>Performing {this.props.song} from {this.props.show}</p>
+                            <p style={{fontSize:'25px'}}>&#9658;</p>
                         </div>
                     </div>
                 </div>

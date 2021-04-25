@@ -1,3 +1,23 @@
+/*
+Colors:
+Blue - #A1C3D1
+Purple - #B39BC8
+White - #F0EBF4
+Pink - #F172A1
+Magenta - #E64398
+
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+:root {
+  --blue:#A1C3D1;
+  --purple:#B39BC8;
+  --white:#F0EBF4;
+  --pink:#F172A1;
+  --magenta:#E64398;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +25,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F0EBF4;
+  background-image: url("../images/background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {
@@ -12,20 +36,48 @@ code {
     monospace;
 }
 
+.navbar {
+  height:100px;
+}
+
 .navbar-brand {
   position: absolute;
   left: 45%;
   width:100px;
+  height: auto;
+  text-align: center;
+  padding: 20px 0px 20px 0px
+}
+
+.navbar-text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-text  {
+  font-family: 'Berkshire Swash', cursive;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #E64398;
+  font-size: 50px;
+}
+
+.header-subtext {
+
 }
 
 .footer {
   margin-top: 1rem;
   padding: 1rem;
-  background-color: rgb(235, 195, 64);
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
+  background-color: #E64398;
+  color: #F0EBF4;
 }
 
 .grid {
@@ -34,6 +86,9 @@ code {
   display: flex;
   margin-left: -30px; /* gutter size offset */
   width: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
 }
 .grid_column {
   padding-left: 30px; /* gutter size */
@@ -84,6 +139,11 @@ code {
   opacity: 1;
 }
 
+.poster:hover {
+  border: 2px solid var(--pink);
+  box-shadow: 0 0 10px var(--pink);
+}
+
 .poster-text {
   position: absolute;
   top: 50%;
@@ -91,4 +151,6 @@ code {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  font-size: 90%;
+  width: 90%;
 }

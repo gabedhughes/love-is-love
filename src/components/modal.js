@@ -12,7 +12,7 @@ class Popup extends React.Component {
         modalState: true
     };
 
-   /* componentDidMount(){
+   componentDidMount(){
         let visited = localStorage["alreadyVisited"];
         if(visited) {
             this.setState({modalState:false})
@@ -20,7 +20,7 @@ class Popup extends React.Component {
             localStorage["alreadyVisited"] = true;
             this.setState({modalState:true})
         }
-    } */
+    }
 
     closeModal = () => this.setState({modalState: false});
 
@@ -28,15 +28,15 @@ class Popup extends React.Component {
         return (
             <Modal show={this.state.modalState} onHide={this.closeModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Please Consider Donating</Modal.Title>
+                    <Modal.Title>Donate</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Text goes here</Modal.Body>
+                <Modal.Body>If you want to support our theatre program and students, please consider donating!</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.closeModal}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={this.closeModal}>
-                        <a style={{display: "table-cell", color: "black"}} href="https://vrhs-drama-boosters.square.site/" target="_blank">Donate</a>
+                    <Button style={{backgroundColor: '#F172A1'}} className="donate-button" variant="primary" onClick={this.closeModal}>
+                        <a style={{display: "table-cell", color: "white"}} href="https://vrhs-drama-boosters.square.site/" target="_blank">Donate</a>
                     </Button>
                 </Modal.Footer>
             </Modal>
