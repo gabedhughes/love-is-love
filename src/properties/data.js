@@ -7,7 +7,7 @@ const posterInfo = [
     poster_url: "https://d36la9njq88rnf.cloudfront.net/bonnieandclyde.png"
   },
   {
-    performer: "Laurel Burks & Jake Jecker",
+    performer: "Laurel Burks & Jude Jecker",
     song: "Another Day",
     show: "Rent",
     video_url: "https://d1d291px3h5re.cloudfront.net/Laurel+Burks+%26+Jake+Jecker+Another+Day+-++Rent+.mp4",
