@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
 import reportWebVitals from './reportWebVitals';
-import {Modal, Button, Nav, Navbar} from 'react-bootstrap';
 import PosterWall from './components/posterwall';
 import Popup from './components/modal';
 import Header from "./components/header"

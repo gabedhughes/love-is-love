@@ -1,6 +1,5 @@
 import React from 'react';
 import Poster from './poster';
-import {Container, Row, Col } from "react-bootstrap";
 import Masonry from "react-masonry-css";
 import posterInfo from "../properties/data";
 

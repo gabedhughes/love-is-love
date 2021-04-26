@@ -1,7 +1,4 @@
 import React from 'react';
-import {Container, Image} from "react-bootstrap";
-import ReactCardFlip from "react-card-flip";
-import {MDBMask, MDBView} from "mdbreact";
 import VideoPlayer from "./videoplayer";
 
 class Poster extends React.Component {
